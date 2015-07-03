@@ -15,7 +15,7 @@ set $tag9 "9"
 set $tag10 "10"
 
 # font for window titles and i3 bar
-font pango:DejaVu Sans Mono 7
+font pango:DejaVu Sans Mono 11
 
 # urxvtcd - start a urxvtc and/or urxvtd
 bindsym $mod+Return exec urxvtcd
@@ -24,7 +24,7 @@ bindsym $mod+Return exec urxvtcd
 bindsym $mod+Shift+q kill
 
 # start dmenu (modify dmenu_run to use dmenu.xft!)
-bindsym $mod+d exec --no-startup-id dmenu_run -b -fn "DejaVu Sans Mono-7"
+bindsym $mod+d exec --no-startup-id dmenu_run -b -fn "DejaVu Sans Mono-11"
 
 # change focus
 bindsym $mod+j focus left
@@ -162,7 +162,8 @@ bindsym $mod+i border none
 
 # enforce special rules for certain programs
 for_window [class="Xfce4-notifyd"] border none floating enable
-for_window [instance="Steam"]      floating enable
+#for_window [instance="Steam"]      floating enable
+for_window [instance="XMathematica"] floating enable
 
 # tweaks
 hide_edge_borders both
