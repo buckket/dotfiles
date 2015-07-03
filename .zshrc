@@ -82,3 +82,5 @@ unalias gm
 alias todo="todo.sh"
 #alias poomf="poomf.sh"
 alias fuck='$(thefuck $(fc -ln -1))'
+if which passpie > /dev/null; then eval "$(passpie complete zsh)"; fi
+
