@@ -138,19 +138,22 @@ bindsym $mod+r mode "resize"
 bar {
         #mode hide
         position top
-        status_command python3 ~/.i3/i3pystatus_config.py
+        status_command python3.4 ~/.i3/i3pystatus_config.py
 }
 
 # colours
 #class                   border  bg      text    indicator
-client.focused            #1b1d1e #1b1d1e #fdf6e3 #2e9ef4
-client.focused_inactive   #1b1d1e #1b1d1e #fdf6e3 #484e50
-client.unfocused          #333333 #1b1d1e #fdf6e3 #292d2e
+#client.focused            #1b1d1e #1b1d1e #fdf6e3 #2e9ef4
+#client.focused_inactive   #1b1d1e #1b1d1e #fdf6e3 #484e50
+#client.unfocused          #333333 #1b1d1e #fdf6e3 #292d2e
 
 # assign programs to their default workspaces
 assign [class="Chromium"] → $tag2
+assign [class="google-chrome"] → $tag2
 assign [class="Icedove"] → $tag3
 assign [class="Pidgin"] → $tag4
+assign [class="Gajim"] → $tag4
+assign [class="Telegram"] → $tag4
 
 # default border style
 new_window 1pixel
@@ -162,7 +165,7 @@ bindsym $mod+i border none
 
 # enforce special rules for certain programs
 for_window [class="Xfce4-notifyd"] border none floating enable
-#for_window [instance="Steam"]      floating enable
+for_window [instance="Steam"]      floating enable
 for_window [instance="XMathematica"] floating enable
 
 # tweaks
@@ -191,11 +194,12 @@ bindsym $mod+p exec "pavucontrol"
 
 # autostart
 #exec --no-startup-id xrdb -merge ~/.Xresources
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton -CGb --backend glx --vsync opengl
 exec --no-startup-id light-locker
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pa-applet
 exec --no-startup-id nm-applet
-exec --no-startup-id redshift-gtk -l 48.13513:11.58198 -t 6500:4000
+exec --no-startup-id redshift-gtk -l 52.31483:13.27403 -t 5500:3000
 #exec --no-startup-id parcellite
 
