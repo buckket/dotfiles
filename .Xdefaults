@@ -1,44 +1,32 @@
-!-------------------------------------------------------------------------------
-! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! More info at:
-! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
-!-------------------------------------------------------------------------------
-
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
-URxvt.loginShell:           true
-URxvt.saveLines:            1000
-URxvt.internalBorder:       2
-URxvt.lineSpace:            0
-URxvt.fading:               0
-
-! Fonts
-
-! Terminus
-!URxvt*font: xft:terminus:pixelsize=20:antialias=true:hinting=true
-!URxvt*boldFont: xft:terminus:pixelsize=20:antialias=true:hinting=true
-
-! DejaVu Sans Mono
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=16:antialias=true:hinting=true
-
-! Unifont
-!URxvt*font: xft:unifont:style=medium:antialias=false
-!URxvt*boldFont: xft:unifont:style=medium:antialias=false
-
-
-! Fix font space
-URxvt*letterSpace: -1
-
-! Scrollbar
-URxvt.scrollStyle:          rxvt
-URxvt.scrollBar:            false
-URxvt.secondaryScroll:      true
-
-! Perl extensions
-URxvt.perl-ext-common:      default,matcher,selection-to-clipboard
-URxvt.matcher.button:       1
-URxvt.url-launcher:         chromium
-URxvt.colorUL: #4682B4
-
+! General
+!urxvt*termName:  rxvt-256color
+urxvt*loginShell:         true
+urxvt*scrollBar:         false
+urxvt*secondaryScroll:    true
+urxvt*saveLines:         65535
+urxvt*cursorBlink:       false
+urxvt*urgentOnBell:       true
+!urxvt*override-redirect:false
+!urxvt*borderLess:       false
+!urxvt*internalBorder:       0
+!urxvt*externalBorder:       0
+ 
+! Extensions
+urxvt*perl-lib:        /usr/lib/urxvt/perl/
+urxvt*perl-ext-common: default,matcher,searchable-scrollback
+urxvt*urlLauncher:     /usr/bin/x-www-browser
+urxvt*matcher.button:  1
+!  - catch ugly URLs
+urxvt.cutchars:        `()'*<>[]{|}"
+ 
+! Appearance
+!  - use a bitmap font
+! urxvt*font:        -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+! urxvt*boldFont:    -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-*-*
+!  - use xft for drawing fonts
+urxvt*font:       xft:Terminus:10
+!  - cursor
+urxvt*cursorColor: #DCDCCC
+!  - pseudo transparency
+urxvt*shading:    5
+urxvt*transparent:true
