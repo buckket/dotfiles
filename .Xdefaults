@@ -27,6 +27,7 @@ URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=16:antialias=true:hinting=tr
 !URxvt*font: xft:unifont:style=medium:antialias=false
 !URxvt*boldFont: xft:unifont:style=medium:antialias=false
 
+
 ! Fix font space
 URxvt*letterSpace: -1
 
