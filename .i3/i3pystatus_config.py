@@ -25,18 +25,18 @@ status.register("battery",
     },)
 
 status.register("network",
-    interface="eth0",
+    interface="enp0s25",
     format_up="E⌃",
     format_down="E⌄")
 
 status.register("network",
-    interface="wlan0",
+    interface="wlp3s0",
     dynamic_color=False,
     format_up="W⌃ {essid} ({quality:.0f}%)",
     format_down="W⌄",)
 
 status.register("disk",
-    path="/home/loom",
+    path="/home/buckket",
     format="⌂ {avail}G",)
 
 status.register("pulseaudio",
