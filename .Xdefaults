@@ -1,17 +1,11 @@
-!-------------------------------------------------------------------------------
-! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! More info at:
-! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
-!-------------------------------------------------------------------------------
-
-! URxvt.urgentOnBell:         true
+URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
 URxvt.loginShell:           true
 URxvt.saveLines:            1000
 URxvt.internalBorder:       2
 URxvt.lineSpace:            0
 URxvt.fading:               0
+
 
 ! Fonts
 
@@ -37,7 +31,7 @@ URxvt.scrollBar:            false
 URxvt.secondaryScroll:      true
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,matcher,selection-to-clipboard
+URxvt.perl-ext-common:      default,matcher,selection-to-clipboard,searchable-scrollback
 URxvt.matcher.button:       1
 URxvt.url-launcher:         chromium
 URxvt.colorUL: #4682B4
