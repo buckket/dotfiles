@@ -5,8 +5,8 @@ status = Status(standalone=True)
 status.register("clock",
     format="%a %d.%m.%Y %T",)
 
-status.register("pomodoro",
-    sound="/home/loom/.i3/bleep_normal.wav",)
+#status.register("pomodoro",
+#    sound="/home/loom/.i3/bleep_normal.wav",)
 
 status.register("load",
     format="{avg1}",)
